@@ -1,0 +1,95 @@
+# Netflix Movies and TV Shows – Data Cleaning
+
+## 📌 Overview
+This project is part of my **Data Analyst Internship Task 1: Data Cleaning and Preprocessing**.  
+The dataset used is the **Netflix Movies and TV Shows Dataset** from Kaggle.
+
+## 🛠 Steps Performed
+1. **Handled Missing Values**  
+   - Filled missing values in `director`, `cast`, and `country` columns with `"Unknown"`.  
+   - Converted `date_added` to datetime format.
+
+2. **Removed Duplicates**  
+   - Dropped duplicate rows to ensure uniqueness.
+
+3. **Standardized Text Formats**  
+   - Converted `type` column to lowercase (`movie`, `tv show`).  
+   - Cleaned `rating` column for consistent values.  
+
+4. **Renamed Columns**  
+   - Renamed all column headers to lowercase and snake_case.  
+
+5. **Fixed Data Types**  
+   - Converted `release_year` to integer.  
+
+## ✅ Output
+- Cleaned dataset: `netflix_cleaned.csv`
+- Python script: `cleaning.ipynb`
+
+## 📂 Files in Repo
+- `cleaning1.ipynb` – Jupyter notebook with full code.  
+- `netflix_cleaned.csv` – Final cleaned dataset.  
+- `README.md` – Summary of changes and process.  
+
+## 🎯 Key Learnings
+- Handling missing values with `fillna()` and type conversion.  
+- Removing duplicates with `drop_duplicates()`.  
+- Standardizing inconsistent formats (text, date, column names).  
+- Preparing data for further analysis or visualization.  
+
+---
+
+
+
+Dataset Chosen: Netflix Movies and TV Shows
+
+Steps Performed:
+
+Handled missing values in director and cast columns by filling with "Unknown".
+
+Removed 1,500 duplicate rows.
+
+Standardized type column values to lowercase (movie, tv show).
+
+Converted date_added to datetime format (dd-mm-yyyy).
+
+Renamed all column headers to lowercase with underscores.
+
+Converted release_year to integer type.
+
+Output: Cleaned dataset (cleaned_dataset.csv) ready for analysis
+
+
+
+
+1. What are missing values and how do you handle them?
+
+Answer: Missing values are blank entries in data. Handle by removing (dropna()), filling with mean/median/mode, or replacing with "Unknown".
+
+2. How do you treat duplicate records?
+
+Answer: Duplicates are repeated rows. Remove using drop_duplicates() or keep the most relevant one.
+
+3. Difference between dropna() and fillna() in Pandas?
+
+Answer: dropna() removes rows/columns with nulls; fillna() replaces nulls with a value.
+
+4. What is outlier treatment and why is it important?
+
+Answer: Outlier treatment manages extreme values by removing, capping, or transforming them. It prevents skewed results and improves model accuracy.
+
+5. Explain the process of standardizing data.
+
+Answer: Standardization means making data uniform—consistent case, date formats, column names, and scaled numbers.
+
+6. How do you handle inconsistent data formats (e.g., date/time)?
+
+Answer: Convert all to a single standard using functions like pd.to_datetime(), and validate with rules.
+
+7. What are common data cleaning challenges?
+
+Answer: Missing values, duplicates, outliers, inconsistent formats, mixed data types, and large dataset size.
+
+8. How can you check data quality?
+
+Answer: By checking completeness, uniqueness, consistency, accuracy, validity, and using .info(), .describe(), .isnull().
